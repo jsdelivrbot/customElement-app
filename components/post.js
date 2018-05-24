@@ -4,6 +4,8 @@ class Post extends HTMLElement {
   constructor(container, data) {
     super();
     this.api = container.get("api");
+
+    // Get data injeted from router
     this.data = data;
   }
 
@@ -13,12 +15,9 @@ class Post extends HTMLElement {
 
   async render() {
     let notifier = document.querySelector("notifier-el");
-    notifier.notify("Post loading");
-
-    let data = await this.api.get(`https://jsonplaceholder.typicode.com/posts/${this.data.id}`);
     let post = HTML`<section id="single-post">
-                        <h2>${data.title}</h2>
-                        <p>${data.body}</p>
+                        <h2>${this.data.title}</h2>
+                        <p>${this.data.body}</p>
                     </section>`;
 
     notifier.notify("Post loaded");

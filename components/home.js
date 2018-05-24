@@ -4,6 +4,8 @@ import {HTML} from "https://cdn.rawgit.com/tonis2/light-html/09048995/build/bund
 class Home extends HTMLElement {
   constructor(container) {
     super();
+
+    // These are injected into
     this.api = container.get("api");
     this.router = container.get("router");
   }
