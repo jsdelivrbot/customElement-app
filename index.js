@@ -18,6 +18,7 @@ const api = App.container.get("api");
 
 App.router
   .on("/", params => {
+    console.log("home");
     App.renderPage("home-el");
   })
   .on("/post/:id", async params => {
