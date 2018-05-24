@@ -2,8 +2,6 @@ import App from "https://cdn.rawgit.com/tonis2/component-engine/58660d22/build/b
 import * as components from "./components/index.js";
 import * as utils from "./utils/index.js";
 
-console.log("works")
-
 //Let App engine register our components and utilities.
 //Utilities will be inserted into components automatically.
 App.register({ components, utils });
@@ -21,6 +19,7 @@ const api = App.container.get("api");
 App.router
   .on("/", params => {
     App.renderPage("home-el");
+    console.log("home")
   })
   .on("/post/:id", async params => {
     //Notify that post loading starts
