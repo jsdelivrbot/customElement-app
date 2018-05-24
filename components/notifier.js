@@ -1,8 +1,9 @@
-import html from "https://cdn.rawgit.com/tonis2/light-html/e1497d71/index.js";
+import {HTML} from "https://cdn.rawgit.com/tonis2/light-html/09048995/build/bundle.js";
+
 
 class Notifier extends HTMLElement {
   notify(info) {
-    let notification = html`<span>${info}</span>`;
+    let notification = HTML`<span>${info}</span>`;
 
     notification.render(this);
 

@@ -1,10 +1,10 @@
-import App from "https://cdn.rawgit.com/tonis2/component-engine/4bafee6a/index.js";
+import App from "https://cdn.rawgit.com/tonis2/component-engine/58660d22/build/bundle.js";
 import * as components from "./components/index.js";
 import * as utils from "./utils/index.js";
 
 App.register({ components, utils });
-
 App.render("notifier-el");
+
 
 App.router
   .on("/", params => {

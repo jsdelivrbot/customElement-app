@@ -1,4 +1,5 @@
-import html from "https://cdn.rawgit.com/tonis2/light-html/e1497d71/index.js";
+import {HTML} from "https://cdn.rawgit.com/tonis2/light-html/09048995/build/bundle.js";
+
 
 class Home extends HTMLElement {
   constructor(container) {
@@ -20,14 +21,12 @@ class Home extends HTMLElement {
     notifier.notify("Posts loading");
 
     let data = await this.api.get("https://jsonplaceholder.typicode.com/posts");
-    let postsElement = html `<section id="posts-container">
-                               ${data.map(post => {
-                                   let item = html`<div onclick="${this.openPost.bind(this, post)}" id="post">
-                                                    <h3>${post.title}</h3>
-                                                    <p>${post.body}</p>
-                                                 </div>`
-                                     return item.dom;
-                                })}
+    let postsElement = HTML `<section id="posts-container">
+                               ${data.map(post =>  HTML`<div onclick="${this.openPost.bind(this, post)}" id="post">
+                                                          <h3>${post.title}</h3>
+                                                          <p>${post.body}</p>
+                                                       </div>`
+                                )}
                             </section>`;
 
     notifier.notify("Posts loaded");

@@ -1,4 +1,4 @@
-import html from "https://cdn.rawgit.com/tonis2/light-html/e1497d71/index.js";
+import {HTML} from "https://cdn.rawgit.com/tonis2/light-html/09048995/build/bundle.js";
 
 class Post extends HTMLElement {
   constructor(container, data) {
@@ -16,7 +16,7 @@ class Post extends HTMLElement {
     notifier.notify("Post loading");
 
     let data = await this.api.get(`https://jsonplaceholder.typicode.com/posts/${this.data.id}`);
-    let post = html`<section id="single-post">
+    let post = HTML`<section id="single-post">
                         <h2>${data.title}</h2>
                         <p>${data.body}</p>
                     </section>`;
