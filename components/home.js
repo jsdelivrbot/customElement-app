@@ -5,7 +5,7 @@ class Home extends HTMLElement {
   constructor(container) {
     super();
 
-    // These are injected into
+    // These are injected into Element via App-engine.
     this.api = container.get("api");
     this.router = container.get("router");
   }
