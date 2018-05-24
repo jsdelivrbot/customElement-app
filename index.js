@@ -19,7 +19,6 @@ const api = App.container.get("api");
 App.router
   .on("/", params => {
     App.renderPage("home-el");
-    console.log("home")
   })
   .on("/post/:id", async params => {
     //Notify that post loading starts
