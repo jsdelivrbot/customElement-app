@@ -1,4 +1,4 @@
-import App from "https://cdn.rawgit.com/tonis2/component-engine/master/build/bundle.js";
+import App from "https://cdn.jsdelivr.net/gh/tonis2/component-engine/build/bundle.js";
 import * as components from "./components/index.js";
 import * as utils from "./utils/index.js";
 

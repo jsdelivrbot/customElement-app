@@ -1,4 +1,4 @@
-import {HTML} from "https://cdn.rawgit.com/tonis2/light-html/09048995/build/bundle.js";
+import {HTML} from "https://cdn.jsdelivr.net/gh/tonis2/light-html@09048995/build/bundle.js";
 
 
 class Home extends HTMLElement {
